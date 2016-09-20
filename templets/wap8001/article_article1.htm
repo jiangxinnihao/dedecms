@@ -1,0 +1,154 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/metinfo.css" id="metuimodule" data-module="10001">
+
+<link rel="stylesheet" type="text/css" href="/a/wap_files/default.css">
+
+<!--轮播皮肤css begin-->
+<link rel="stylesheet" type="text/css" href="/a/wap_files/slider.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/slider.default.css"> 
+<!--轮播皮肤css end-->
+
+<!--面板皮肤css begin-->
+<link rel="stylesheet" type="text/css" href="/a/wap_files/panel.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/panel.default.css">
+<!--面板皮肤css begin-->
+
+<!--选项卡css begin-->
+<link rel="stylesheet" type="text/css" href="/a/wap_files/transitions.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/tabs.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/tabs.default.css">
+<!--选项卡css end-->
+
+<!--核心组件js begin-->
+<script type="text/javascript" src="/a/wap_files/zepto.js"></script>
+<script type="text/javascript" src="/a/wap_files/touch.js"></script>
+<script type="text/javascript" src="/a/wap_files/matchMedia.js"></script>
+<style>.gmu-media-detect{-webkit-transition: width 0.001ms; width: 0; position: absolute; top: -10000px;}
+@media screen and (width: 1360px) { #gmu-media-detect0 { width: 1px; } }
+</style>
+<script type="text/javascript" src="/a/wap_files/event.ortchange.js"></script>
+<script type="text/javascript" src="/a/wap_files/parseTpl.js"></script>
+<script type="text/javascript" src="/a/wap_files/gmu.js"></script>
+<script type="text/javascript" src="/a/wap_files/event.js"></script>
+<script type="text/javascript" src="/a/wap_files/widget.js"></script>
+<script type="text/javascript" src="/a/wap_files/iscroll.js"></script>
+
+<!--面板相关 end-->
+<script type="text/javascript" src="/a/wap_files/throttle.js"></script>
+<script type="text/javascript" src="/a/wap_files/event.scrollStop.js"></script>
+<script type="text/javascript" src="/a/wap_files/panel.js"></script>
+<!--面板相关js end-->
+
+<!--轮播组件 begin-->
+<script type="text/javascript" src="/a/wap_files/slider.js"></script>
+<script type="text/javascript" src="/a/wap_files/arrow.js"></script>
+<script type="text/javascript" src="/a/wap_files/dots.js"></script>
+<script type="text/javascript" src="/a/wap_files/$touch.js"></script>
+<script type="text/javascript" src="/a/wap_files/$autoplay.js"></script>
+<script type="text/javascript" src="/a/wap_files/$lazyloadimg.js"></script>
+<!--轮播组件js end-->
+
+<!--选项卡js begin-->
+<script type="text/javascript" src="/a/wap_files/tabs.js"></script>
+<!--选项卡js end-->
+
+<!--图片加载js begin-->
+<script type="text/javascript" src="/a/wap_files/imglazyload.js"></script>
+<!--图片加载js end-->
+
+<style type="text/css">
+body{ font-size:14px!important;}
+.flexslider li img{ height:225px;}
+.showproduct_slides img{ height:225px!important;}
+.showimg_slides img{ height:225px!important;}
+.dl-jqrun dt img,.dl-jqrun dt{ max-width:px;}
+</style>
+</head>
+<body>
+<div class="metcont" style="background-color: rgb(255, 255, 255); width: 340px;min-height:600px;">
+<header data-value="1">
+		<div class="top mytop">
+			<div class="metreturn"><a href="javascript:history.go(-1);"></a></div>
+			{dede:channel  type ='top' row="1"}
+			<div class="mtitle">[field:typename/]</div>
+			{/dede:channel}
+			<ul class="top-right">
+				<li class="tlist seach"><span class="tspan icon-sousuo"></span>
+				</li>
+				<li class="tlist column"><span class="tspan icon-fenlei"></span>
+
+<!--导航方式3-->
+		<nav class="type3 none topmorebox">
+        <i></i>
+        <ul class="list-none">
+            <li><a href='/' class="nav"><span>首页</span></a></li>
+            {dede:channel  type ='top' row="1"}
+            <li><a href='[field:typelink/]' class="hover-none nav"><span>[field:typename/]</span></a></li>
+            {/dede:channel}
+          </ul>
+        </nav>
+
+				</li>
+
+			</ul>
+		</div>
+<!--搜索框-->
+<div class="seachbox none topmorebox">
+	<div class="seachbox_box">
+			<i></i>
+            
+			<form method="form1" name="formsearch" action="/plus/search.php">
+            <input type="hidden" name="kwtype" value="0" />
+                <input type="text" name="q" class="text" placeholder="请输入关键词" style="">
+                <input type="submit" name="Submit" value="立即搜" class="submit">
+            </form>
+	</div>
+</div>
+</header>
+<div class="sidebar">
+    <div class="sb_nav">
+			<h3 class="title">
+			<p class="moresidebar">更多分类</p>所属栏目：
+{dede:type}[field:typename /]{/dede:type}
+			</h3>
+    </div>
+
+
+    <div class="sb_box">
+
+        <div class="active" id="shownews">
+            <h1 class="title">{dede:field.title/}<p class="hits">2014-10-02 16:13&nbsp;&nbsp;点击次数：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}"type='text/javascript' language="javascript"></script></p></h1>
+
+            <div class="editor">
+            <div>{dede:field.content/}
+<div id="metinfo_additional"></div>
+</div>
+<div class="clear"></div>
+</div>
+
+
+            <div class="met_page">
+            <ul class="preul">
+            <li class="preinfo">{dede:prenext get='pre'/}</li>
+            <li class="nextinfo">{dede:prenext get='next'/}</li>
+            </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+{dede:include filename="infooter.htm"/}
+</body></html>
