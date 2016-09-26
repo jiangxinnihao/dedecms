@@ -1,0 +1,30 @@
+<header data-value="1">
+  <div class="top">
+    <div class="top-logo"> <a href=""><img src="{dede:global.cfg_indexurl/}/wap_files/logo.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"></a> </div>
+    <ul class="top-right">
+      <li class="tlist seach"><span class="tspan icon-sousuo"></span> </li>
+      <li class="tlist column"><span class="tspan icon-fenlei"></span> 
+        
+        <!--导航方式3-->
+        <nav class="type3 none topmorebox"> <i></i>
+          <ul class="list-none">
+            <li><a href='{dede:global.cfg_indexurl/}' class="nav"><span>首页</span></a></li>
+            {dede:type   row="1"}
+            <li><a href='[field:typelink/]' class="hover-none nav"><span>[field:typename/]</span></a></li>
+            {/dede:type}
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </div>
+  <!--搜索框-->
+  <div class="seachbox none topmorebox">
+    <div class="seachbox_box"> <i></i>
+      <form method="form1" name="formsearch" action="/plus/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <input type="text" name="q" class="text" placeholder="请输入关键词" style="">
+        <input type="submit" name="Submit" value="立即搜索" class="submit">
+      </form>
+    </div>
+  </div>
+</header>

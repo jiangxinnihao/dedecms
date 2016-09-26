@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/metinfo.css" id="metuimodule" data-module="10001">
+
+<link rel="stylesheet" type="text/css" href="/a/wap_files/default.css">
+<!--轮播皮肤css begin-->
+<link rel="stylesheet" type="text/css" href="/a/wap_files/slider.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/slider.default.css"> 
+<!--轮播皮肤css end-->
+
+<!--面板皮肤css begin-->
+<link rel="stylesheet" type="text/css" href="/a/wap_files/panel.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/panel.default.css">
+<!--面板皮肤css begin-->
+
+<!--选项卡css begin-->
+<link rel="stylesheet" type="text/css" href="/a/wap_files/transitions.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/tabs.css">
+<link rel="stylesheet" type="text/css" href="/a/wap_files/tabs.default.css">
+<!--选项卡css end-->
+
+<!--核心组件js begin-->
+<script type="text/javascript" src="/a/wap_files/zepto.js"></script>
+<script type="text/javascript" src="/a/wap_files/touch.js"></script>
+<script type="text/javascript" src="/a/wap_files/matchMedia.js"></script>
+<style>.gmu-media-detect{-webkit-transition: width 0.001ms; width: 0; position: absolute; top: -10000px;}
+@media screen and (width: 1360px) { #gmu-media-detect0 { width: 1px; } }
+</style>
+<script type="text/javascript" src="/a/wap_files/event.ortchange.js"></script>
+<script type="text/javascript" src="/a/wap_files/parseTpl.js"></script>
+<script type="text/javascript" src="/a/wap_files/gmu.js"></script>
+<script type="text/javascript" src="/a/wap_files/event.js"></script>
+<script type="text/javascript" src="/a/wap_files/widget.js"></script>
+<script type="text/javascript" src="/a/wap_files/iscroll.js"></script>
+
+<!--面板相关 end-->
+<script type="text/javascript" src="/a/wap_files/throttle.js"></script>
+<script type="text/javascript" src="/a/wap_files/event.scrollStop.js"></script>
+<script type="text/javascript" src="/a/wap_files/panel.js"></script>
+<!--面板相关js end-->
+
+<!--轮播组件 begin-->
+<script type="text/javascript" src="/a/wap_files/slider.js"></script>
+<script type="text/javascript" src="/a/wap_files/arrow.js"></script>
+<script type="text/javascript" src="/a/wap_files/dots.js"></script>
+<script type="text/javascript" src="/a/wap_files/$touch.js"></script>
+<script type="text/javascript" src="/a/wap_files/$autoplay.js"></script>
+<script type="text/javascript" src="/a/wap_files/$lazyloadimg.js"></script>
+<!--轮播组件js end-->
+
+<!--选项卡js begin-->
+<script type="text/javascript" src="/a/wap_files/tabs.js"></script>
+<!--选项卡js end-->
+
+<!--图片加载js begin-->
+<script type="text/javascript" src="/a/wap_files/imglazyload.js"></script>
+<!--图片加载js end-->
+
+<style type="text/css">
+body{ font-size:14px!important;}
+.flexslider li img{ height:225px;}
+.showproduct_slides img{ height:225px!important;}
+.showimg_slides img{ height:225px!important;}
+.dl-jqrun dt img,.dl-jqrun dt{ max-width:px;}
+</style>
+</head>
+<body>
+<div class="metcont" style="background-color: rgb(255, 255, 255); width: 340px;min-height:600px;">
+{dede:include filename="head.htm"/}
+<div class="sidebar">
+    <div class="sb_nav">
+			<h3 class="title">
+      <p class="moresidebar">更多分类</p>{dede:field name='position'/} </h3>
+    </div>
+
+    <div class="sb_box">
+
+        <div class="active ajaxlist" id="productlist">
+
+{dede:channelartlist row=6}
+
+	<img src="/c/wap_files/cp_pic.png" /><a href='{dede:field name='typeurl'/}'><font color="black">{dede:field name='typename'/}</font></a><br>
+	
+{/dede:channelartlist}
+			
+
+		</div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+{dede:include filename="infooter.htm"/}
+</body></html>
